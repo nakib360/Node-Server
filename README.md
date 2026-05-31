@@ -33,10 +33,11 @@ A clean, modular, and scalable **Node.js + Express + MongoDB** boilerplate for b
 
 ```
 ├── public/                  # Static files
+│   ├── index.html
 ├── src/
 │   ├── Routs/
 │   │   └── test.js          # Example route
-│   ├── app.js               # App entry (Vercel)
+│   ├── app.js               # App entry (Both Vercel and Development)
 │   ├── db.js                # MongoDB connection
 │   ├── middleware.js        # All middlewares
 │   └── server.js            # Server entry (dev)
