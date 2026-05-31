@@ -65,8 +65,6 @@ Create a `.env` file in the root directory:
 
 ```env
 URI=your_mongodb_connection_string
-CLIENT_URL=http://localhost:3000
-PORT=4300
 ```
 
 > Note: MongoDB connection is **optional** — the server will run without a URI, but DB features will be unavailable.
