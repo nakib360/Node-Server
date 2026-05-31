@@ -1,88 +1,131 @@
 # Node.js Server Boilerplate
 
-A simple and scalable Node.js + Express + MongoDB boilerplate for backend development.
+A clean, modular, and scalable **Node.js + Express + MongoDB** boilerplate for backend development — ready to clone and build on.
+
+---
 
 ## Features
 
-* Express.js server setup
-* MongoDB connection (native driver)
-* Environment variables support (.env)
-* CORS enabled
-* JSON body parsing
-* Static file serving
-* ES Module (ESM) support
+- Express.js server with modular route handling
+- MongoDB connection via native driver (optional — server runs without it)
+- Environment variable support via `.env`
+- CORS enabled with configurable origin
+- JSON body parsing with payload limit
+- Static file serving from `public/`
+- Separated middleware, routes, and DB config
+- ES Module (ESM) support throughout
+
+---
 
 ## Tech Stack
 
-* Node.js
-* Express.js
-* MongoDB
-* dotenv
-* cors
+| Package    | Purpose                  |
+|------------|--------------------------|
+| Node.js    | Runtime                  |
+| Express.js | Web framework            |
+| MongoDB    | Database (native driver) |
+| dotenv     | Environment variables    |
+| cors       | Cross-origin requests    |
+
+---
 
 ## Project Structure
 
 ```
-public/
- ├── server.js
-src/
- ├── server.js
-.env
-.gitignore
-vercel.json
+├── public/                  # Static files
+├── src/
+│   ├── Routs/
+│   │   └── test.js          # Example route
+│   ├── app.js               # App entry (Vercel)
+│   ├── db.js                # MongoDB connection
+│   ├── middleware.js        # All middlewares
+│   └── server.js            # Server entry (dev)
+├── .env                     # Environment variables
+├── .gitignore
+├── package.json
+├── vercel.json              # Vercel deployment config
+└── README.md
 ```
+
+---
 
 ## Installation
 
 ```bash
-cd your folder name
-git clone https://github.com/nakib360/Node-Server.git
+git clone https://github.com/nakib360/Node-Server.git your-folder-name
+cd your-folder-name
 npm install
 ```
 
+---
+
 ## Environment Variables
 
-Create a .env file in the root directory:
+Create a `.env` file in the root directory:
 
-```
+```env
 URI=your_mongodb_connection_string
-MODE=dev
+CLIENT_URL=http://localhost:3000
+PORT=4300
 ```
+
+> Note: MongoDB connection is **optional** — the server will run without a URI, but DB features will be unavailable.
+
+---
 
 ## Run Project
 
-Development mode:
+**Development mode:**
 
 ```bash
 npm run dev
 ```
 
-## API Example
+---
 
-Test Route:
+## API Reference
+
+### Test Route
 
 ```
 GET /test
 ```
 
-Response:
+**Response:**
 
 ```json
 "the node server boilerplate is ready."
 ```
 
+---
+
+## Deployment
+
+This boilerplate is configured for **Vercel** out of the box via `vercel.json`.
+
+```bash
+vercel deploy
+```
+
+---
+
+## Roadmap
+
+- [ ] Authentication system (JWT)
+- [ ] MVC architecture
+- [ ] Centralized error handling
+- [ ] Request logging (Morgan / Winston)
+- [ ] Rate limiting
+- [ ] Input validation (Zod / Joi)
+
+---
+
 ## Author
 
-Built by nakib360
+Built by [nakib360](https://github.com/nakib360)
+
+---
 
 ## License
 
-This project is open source and free to use.
-
-## Future Improvements
-
-* Authentication system
-* MVC architecture
-* Centralized error handling
-* Logging system
-* Rate limiting
+This project is open source and free to use under the [MIT License](LICENSE).
