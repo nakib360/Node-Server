@@ -31,13 +31,13 @@ const run = async() => {
 }}
 run().catch(console.dir);
 
-app.get("/mongodb", (req, res) => {
-    res.send("mongodb");
+app.get("/test", (req, res) => {
+    res.send("the node server boilerplate is ready.");
 })
 
 if(process.env.MOOD === "dev"){
     app.listen(port, () => {
-        console.log("server started in dev mood");
+        console.log("server started in dev mood.");
     });
 }
 

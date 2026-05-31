@@ -23,21 +23,20 @@ A simple and scalable Node.js + Express + MongoDB boilerplate for backend develo
 ## Project Structure
 
 ```
+public/
+ ├── server.js
 src/
  ├── server.js
- ├── app.js (optional if separated)
- ├── routes/
- ├── controllers/
- ├── models/
-public/
 .env
+.gitignore
+vercel.json
 ```
 
 ## Installation
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+cd your folder name
+git clone https://github.com/nakib360/Node-Server.git
 npm install
 ```
 
@@ -46,7 +45,6 @@ npm install
 Create a .env file in the root directory:
 
 ```
-PORT=4300
 URI=your_mongodb_connection_string
 MODE=dev
 ```
@@ -59,29 +57,23 @@ Development mode:
 npm run dev
 ```
 
-Production mode:
-
-```bash
-npm start
-```
-
 ## API Example
 
 Test Route:
 
 ```
-GET /mongodb
+GET /test
 ```
 
 Response:
 
 ```json
-"mongodb"
+"the node server boilerplate is ready."
 ```
 
 ## Author
 
-Built by nakib uddin
+Built by nakib360
 
 ## License
 
