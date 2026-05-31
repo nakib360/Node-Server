@@ -43,6 +43,7 @@ A clean, modular, and scalable **Node.js + Express + MongoDB** boilerplate for b
 │   └── server.js            # Server entry (dev)
 ├── .env                     # Environment variables
 ├── .gitignore
+├── package-lock.json
 ├── package.json
 ├── vercel.json              # Vercel deployment config
 └── README.md
