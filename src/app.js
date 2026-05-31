@@ -11,7 +11,7 @@ const dev = !process.env.VERCEL;
 middleWares(app);
 connectDB().catch(console.dir);
 
-app.get("/test", testRouter);
+app.use("/test", testRouter);
 
 if(dev){
   app.listen(port, () => {
