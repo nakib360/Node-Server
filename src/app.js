@@ -15,7 +15,7 @@ app.use("/test", testRouter);
 
 if(dev){
   app.listen(port, () => {
-    console.log("server started in dev mood.");
+    console.log(`server started in dev mood.\nctrl + click http://localhost:${port}`);
   });
 }
 
