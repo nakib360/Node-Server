@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import terminalLink from "terminal-link";
 import middleWares from "./middleware.js";
 import testRouter from "./Routs/test.js"
 import { connectDB } from "./db.js";
@@ -15,7 +16,9 @@ app.use("/test", testRouter);
 
 if(dev){
   app.listen(port, () => {
-    console.log(`server started in dev mood.\nctrl + click http://localhost:${port}`);
+    const url = `http://localhost:${port}`;
+    const clickable = terminalLink(url, url);
+    console.log(`server started in dev mood.\nctrl + click ${clickable}`);
   });
 }
 
