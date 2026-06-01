@@ -11,6 +11,12 @@ const dev = !process.env.VERCEL;
 middleWares(app);
 connectDB().catch(console.dir);
 
+app.use(express.static(path.resolve(__dirname, '../public')));
+
+app.get('/', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../public', 'index.html'));
+});
+
 app.use("/test", testRouter);
 
 if(dev){
